@@ -13,6 +13,8 @@
 		189504222CDD9003008C4984 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189504212CDD9003008C4984 /* HTTPClient.swift */; };
 		189504242CDD904B008C4984 /* FeedItemMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189504232CDD904B008C4984 /* FeedItemMapper.swift */; };
 		189504272CDE7ABF008C4984 /* URLSessionHttpClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189504262CDE7ABF008C4984 /* URLSessionHttpClientTests.swift */; };
+		1895042C2CE7D0E5008C4984 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1895042B2CE7D0E5008C4984 /* XCTestCase+MemoryLeakTracking.swift */; };
+		1895042E2CE7DD6B008C4984 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1895042D2CE7DD6B008C4984 /* URLSessionHTTPClient.swift */; };
 		18EE64A02CD1370E000B1A40 /* RemoteFeedLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE649F2CD1370E000B1A40 /* RemoteFeedLoaderTests.swift */; };
 		18EE64A32CD19B08000B1A40 /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE64A22CD19B08000B1A40 /* RemoteFeedLoader.swift */; };
 /* End PBXBuildFile section */
@@ -37,6 +39,8 @@
 		189504212CDD9003008C4984 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		189504232CDD904B008C4984 /* FeedItemMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemMapper.swift; sourceTree = "<group>"; };
 		189504262CDE7ABF008C4984 /* URLSessionHttpClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHttpClientTests.swift; sourceTree = "<group>"; };
+		1895042B2CE7D0E5008C4984 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
+		1895042D2CE7DD6B008C4984 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		18EE649F2CD1370E000B1A40 /* RemoteFeedLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoaderTests.swift; sourceTree = "<group>"; };
 		18EE64A22CD19B08000B1A40 /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,10 +113,19 @@
 		189504252CDE45F0008C4984 /* FeedAPI */ = {
 			isa = PBXGroup;
 			children = (
+				189504282CE7D0AB008C4984 /* Helper */,
 				18EE649F2CD1370E000B1A40 /* RemoteFeedLoaderTests.swift */,
 				189504262CDE7ABF008C4984 /* URLSessionHttpClientTests.swift */,
 			);
 			path = FeedAPI;
+			sourceTree = "<group>";
+		};
+		189504282CE7D0AB008C4984 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				1895042B2CE7D0E5008C4984 /* XCTestCase+MemoryLeakTracking.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		18EE64A12CD19AE3000B1A40 /* FeedAPI */ = {
@@ -121,6 +134,7 @@
 				18EE64A22CD19B08000B1A40 /* RemoteFeedLoader.swift */,
 				189504212CDD9003008C4984 /* HTTPClient.swift */,
 				189504232CDD904B008C4984 /* FeedItemMapper.swift */,
+				1895042D2CE7DD6B008C4984 /* URLSessionHTTPClient.swift */,
 			);
 			path = FeedAPI;
 			sourceTree = "<group>";
@@ -241,6 +255,7 @@
 				18EE64A32CD19B08000B1A40 /* RemoteFeedLoader.swift in Sources */,
 				189504222CDD9003008C4984 /* HTTPClient.swift in Sources */,
 				080EDF0C21B6DAE800813479 /* FeedItem.swift in Sources */,
+				1895042E2CE7DD6B008C4984 /* URLSessionHTTPClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +265,7 @@
 			files = (
 				18EE64A02CD1370E000B1A40 /* RemoteFeedLoaderTests.swift in Sources */,
 				189504272CDE7ABF008C4984 /* URLSessionHttpClientTests.swift in Sources */,
+				1895042C2CE7D0E5008C4984 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
