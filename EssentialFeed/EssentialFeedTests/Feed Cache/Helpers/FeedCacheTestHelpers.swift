@@ -1,8 +1,5 @@
 //
-//  FeedCacheTestsHelpers.swift
-//  EssentialFeedTests
-//
-//  Created by Jayakrishnan u on 11/17/24.
+//  Copyright © 2019 Essential Developer. All rights reserved.
 //
 
 import Foundation
@@ -19,6 +16,9 @@ func uniqueImageFeed() -> (models: [FeedImage], local: [LocalFeedImage]) {
 }
 
 extension Date {
+    func minusFeedCacheMaxAge() -> Date {
+        return adding(days: -feedCacheMaxAgeInDays)
+    }
     
     private var feedCacheMaxAgeInDays: Int {
         return 7
@@ -26,10 +26,6 @@ extension Date {
     
     private func adding(days: Int) -> Date {
         return Calendar(identifier: .gregorian).date(byAdding: .day, value: days, to: self)!
-    }
-    
-    func minusFeedCacheMaxAge() -> Date {
-        return adding(days: -feedCacheMaxAgeInDays)
     }
 }
 
